@@ -6,7 +6,6 @@ using static System.Console;
 Clear();
 
 int[] array = new int[4];
-
 newArray(array);
 WriteLine($"[{String.Join(",", array)}]");
 WriteLine($"Количество чётных чисел в массиве = {someCount(array)}");
@@ -17,7 +16,7 @@ void newArray(int[] array)
 {
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = new Random().Next(100, 1000);
+        array[i] = new Random().Next(100, 999);
     }
 }
 
