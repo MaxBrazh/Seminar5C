@@ -6,23 +6,27 @@
 using static System.Console;
 Clear();
 
-int[] arr = new int[4];
-fillArr(arr);
-WriteLine($"[{String.Join(",", arr)}]-> {oddSum(arr)}");
+int[] array = new int[4];
+newArray(array);
+WriteLine($"[{String.Join(",", array)}]");
+WriteLine($"{minusSum(array)}");
 
-void fillArr(int[] arr)
+
+void newArray(int[] array)
 {
-    for (int i = 0; i < arr.Length; i++)
+    for (int i = 0; i < array.Length; i++)
     {
-        arr[i] = new Random().Next(-50, 51);
+        array[i] = new Random().Next(-99, 99);
     }
 }
-int oddSum(int[] arr)
+
+
+int minusSum(int[] array)
 {
     int sum = 0;
-    for (int i = 0; i < arr.Length; i++)
+    for (int i = 0; i < array.Length; i++)
     {
-        if (i % 2 != 0) sum += arr[i];
+        if (i % 2 != 0) sum += array[i];
     }
     return sum;
 }
