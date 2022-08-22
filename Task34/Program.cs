@@ -6,22 +6,24 @@
 using static System.Console;
 Clear();
 
-int[] arr = new int[4];
+int[] array = new int[4];
 
-fillArr(arr);
-WriteLine($"[{String.Join(",", arr)}]-> {evenCount(arr)}");
+newArray(array);
+WriteLine($"[{String.Join(",", array)}]");
+WriteLine($"{someCount(array)}");
 
-void fillArr(int[] arr)
+void newArray(int[] array)
 {
-    for (int i = 0; i < arr.Length; i++)
+    for (int i = 0; i < array.Length; i++)
     {
-        arr[i] = new Random().Next(100, 1000);
+        array[i] = new Random().Next(100, 1000);
     }
 }
-int evenCount(int[] arr)
+
+int someCount(int[] array)
 {
     int counter = 0;
-    foreach (int i in arr)
+    foreach (int i in array)
         if (i % 2 == 0) counter++;
     return counter;
 }
