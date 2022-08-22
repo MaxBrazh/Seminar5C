@@ -9,7 +9,8 @@ Clear();
 int[] array = new int[4];
 newArray(array);
 WriteLine($"[{String.Join(",", array)}]");
-WriteLine($"{minusSum(array)}");
+WriteLine($"Сумма элементов, стоящих на нечётных позициях массива = {minusSum(array)}");
+WriteLine();
 
 
 void newArray(int[] array)

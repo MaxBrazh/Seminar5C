@@ -1,7 +1,6 @@
-﻿/*Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. 
+﻿/* Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. 
 Напишите программу, которая покажет количество чётных чисел в массиве.
-[345, 897, 568, 234] -> 2
-*/
+[345, 897, 568, 234] -> 2 */
 
 using static System.Console;
 Clear();
@@ -10,7 +9,9 @@ int[] array = new int[4];
 
 newArray(array);
 WriteLine($"[{String.Join(",", array)}]");
-WriteLine($"{someCount(array)}");
+WriteLine($"Количество чётных чисел в массиве = {someCount(array)}");
+WriteLine();
+
 
 void newArray(int[] array)
 {
@@ -19,6 +20,7 @@ void newArray(int[] array)
         array[i] = new Random().Next(100, 1000);
     }
 }
+
 
 int someCount(int[] array)
 {
